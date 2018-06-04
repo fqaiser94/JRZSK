@@ -1,23 +1,23 @@
 # Status
 
-spark master launches
-spark worker launches
-spark master is able to connect to workers
+spark master launches  
+spark worker launches  
+spark master is able to connect to workers  
 
-livy launches
-livy can connect to spark-master
+livy launches  
+livy can connect to spark-master  
 
-rstudio launches
-rstudio can connect to spark-master through livy (only on GKE)
+rstudio launches  
+rstudio can connect to spark-master through livy (only on GKE)  
 
-jupyter lab launches
-jupyter lab launches
-jupyter lab can connect to spark-master through pyspark (only on GKE)
-jupyter lab can connect to spark-master through sparkmagic (only on GKE)
-jupyter lab can connect to spark-master through sparkmagic kernels (PySpark, Spark, SparkR, only on GKE)
+jupyter lab launches  
+jupyter lab launches  
+jupyter lab can connect to spark-master through pyspark (only on GKE)  
+jupyter lab can connect to spark-master through sparkmagic (only on GKE)  
+jupyter lab can connect to spark-master through sparkmagic kernels   (PySpark, Spark, SparkR, only on GKE)  
 
-zeppelin launches
-zeppelin can connect to spark-master (only on GKE)
+zeppelin launches  
+zeppelin can connect to spark-master (only on GKE)  
 
 # Lessons learned:
 
@@ -28,15 +28,15 @@ zeppelin can connect to spark-master (only on GKE)
 
 # Fixes to be made
 
-1. Clean up code
-e.g. switch to deployments instead of rc
-e.g. pass spark_ver programmatically to all files
-e.g. build own rstudio image
-e.g. add ability to define what UIs you want to minimize pods running
-e.g. clean up YAMLs, selector crap
-e.g. spark-ui-proxy-controller
-e.g. write a python client to interactively control containers like I want a zeppelin container now
-2. Include example notebooks
+1. Clean up code  
+e.g. switch to deployments instead of rc  
+e.g. pass spark_ver programmatically to all files  
+e.g. build own rstudio image  
+e.g. add ability to define what UIs you want to minimize pods running  
+e.g. clean up YAMLs, selector crap  
+e.g. spark-ui-proxy-controller  
+e.g. write a python client to interactively control containers like I want a zeppelin container now  
+2. Include example notebooks  
 3. Add Google Drive / GitHub integration to JupyterLab
 4. Upgrade to Spark 2.3 and try experimental kubernetes support
 https://spark.apache.org/docs/2.3.0/running-on-kubernetes.html
