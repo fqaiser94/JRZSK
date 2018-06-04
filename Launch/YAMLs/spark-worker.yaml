@@ -1,0 +1,33 @@
+kind: ReplicationController
+apiVersion: v1
+metadata:
+  name: spark-worker
+spec:
+  replicas: 1
+  selector:
+    component: spark-worker
+  template:
+    metadata:
+      labels:
+        component: spark-worker
+    spec:
+      containers:
+        - name: spark-worker
+          # image: spark-img:latest
+          image: gcr.io/summer-surfer-203320/spark-img:latest
+          imagePullPolicy: IfNotPresent
+          command:
+          - "/bin/bash"
+          - "-c"
+          - "--"
+          args :
+          - './start-worker.sh ; sleep infinity'
+          ports:
+            - containerPort: 8081
+          # resources:
+            # requests:
+            #   memory: "250Mi"
+            #   cpu: "250m"
+            # limits:
+            #   memory: "500Mi"
+            #   cpu: "100m"

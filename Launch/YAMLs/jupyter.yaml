@@ -1,0 +1,42 @@
+kind: ReplicationController
+apiVersion: v1
+metadata:
+  name: jupyter
+spec:
+  replicas: 1
+  selector:
+    component: jupyter
+  template:
+    metadata:
+      labels:
+        component: jupyter
+    spec:
+      containers:
+        - name: jupyter
+          # image: jupyter-img:latest
+          image: gcr.io/summer-surfer-203320/jupyter-img:latest
+          imagePullPolicy: IfNotPresent
+          # resources:
+            # requests:
+            #   memory: "250Mi"
+            #   cpu: "250m"
+            # limits:
+            #   memory: "250Mi"
+            #   cpu: "100m"
+          ports:
+          - containerPort: 8888
+            protocol: TCP
+            name: http
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: jupyter
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 8888
+      targetPort: 8888
+      name: http
+  selector:
+    component: jupyter

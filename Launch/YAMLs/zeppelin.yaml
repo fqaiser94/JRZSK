@@ -1,0 +1,33 @@
+kind: ReplicationController
+apiVersion: v1
+metadata:
+  name: zeppelin
+spec:
+  replicas: 1
+  selector:
+    component: zeppelin
+  template:
+    metadata:
+      labels:
+        component: zeppelin
+    spec:
+      containers:
+        - name: zeppelin
+          # image: zeppelin-img:latest
+          image: gcr.io/summer-surfer-203320/zeppelin-img:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: zeppelin
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 8080
+      targetPort: 8080
+      name: http
+  selector:
+    component: zeppelin
