@@ -1,3 +1,6 @@
+Access JupyterLab, RStudio, Zeppelin, and Spark all within your browser! Using the power of Kubernetes. 
+
+
 # Status
 
 spark master launches  
