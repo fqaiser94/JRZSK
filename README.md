@@ -19,11 +19,16 @@ jupyter lab can connect to spark-master through sparkmagic kernels   (PySpark, S
 zeppelin launches  
 zeppelin can connect to spark-master (only on GKE)  
 
+Spark UI
 ![Image of Spark UI](/Images/Spark-ui.png)
+Livy UI
 ![Image of Livy UI](/Images/Livy.png)
+RStudio
 ![Image of RStudio](/Images/RStudio.png)
+JupyterLab
 ![Image of JupyterLab](/Images/JupyterLab.png)
-![Image of Zeppelin](/Images/Zeppelin.png)
+Zeppelin
+![Image of Zeppelin](/Images/Zeppelin.png)  
 <!-- ![Image of spark-shell](https://octodex.github.com/images/yaktocat.png)
 ![Image of pyspark](https://octodex.github.com/images/yaktocat.png)
 ![Image of sparkR](https://octodex.github.com/images/yaktocat.png)
