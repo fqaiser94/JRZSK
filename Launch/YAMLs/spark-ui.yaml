@@ -13,7 +13,8 @@ spec:
     spec:
       containers:
         - name: spark-ui
-          image: spark-ui-img:latest
+          image: navicore/spark-ui-proxy
+          # image: spark-ui-img:latest
           # image: gcr.io/summer-surfer-203320/spark-ui-img:latest
           ports:
             - containerPort: 80

@@ -13,7 +13,7 @@ docker build -t jupyter-img .
 cd ../Zeppelin
 docker build -t zeppelin-img .
 cd ../RStudio
-# docker build -t rstudio-img .
+docker build -t rstudio-img .
 cd ../..
 
 # docker images

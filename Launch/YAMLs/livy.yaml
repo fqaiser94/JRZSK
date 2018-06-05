@@ -13,8 +13,8 @@ spec:
     spec:
       containers:
         - name: livy
-          # image: livy-img:latest
-          image: gcr.io/summer-surfer-203320/livy-img:latest
+          image: livy-img:latest
+          # image: gcr.io/summer-surfer-203320/livy-img:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8998

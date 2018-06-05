@@ -19,12 +19,22 @@ jupyter lab can connect to spark-master through sparkmagic kernels   (PySpark, S
 zeppelin launches  
 zeppelin can connect to spark-master (only on GKE)  
 
+![Image of Spark UI](/Images/Spark-ui.png)
+![Image of Livy UI](/Images/Livy.png)
+![Image of RStudio](/Images/RStudio.png)
+![Image of JupyterLab](/Images/JupyterLab.png)
+![Image of Zeppelin](/Images/Zeppelin.png)
+![Image of spark-shell](https://octodex.github.com/images/yaktocat.png)
+![Image of pyspark](https://octodex.github.com/images/yaktocat.png)
+![Image of sparkR](https://octodex.github.com/images/yaktocat.png)
+![Image of bash](https://octodex.github.com/images/yaktocat.png)
+
 # Lessons learned:
 
 1. Need to have same python version on all nodes
 2. Need to have same spark version on all nodes
 3. Be careful when using minikube docker daemon and local docker daemon in same terminal session.
-4. Starting with version 0.5.0-incubating, session kind “pyspark3” is removed, instead users require to set PYSPARK_PYTHON to python3 executable.
+4. "Starting with version 0.5.0-incubating, session kind “pyspark3” is removed, instead users require to set PYSPARK_PYTHON to python3 executable." - livy website
 
 # Fixes to be made
 
@@ -44,3 +54,12 @@ https://spark.apache.org/docs/2.3.0/running-on-kubernetes.html
 6. Testing jupyter notebooks
 https://blog.thedataincubator.com/2016/06/testing-jupyter-notebooks/
 7. set resource limits and shtuff
+
+# Links to useful material
+
+1. Great blog series on deploying spark on kubernetes:
+http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-1/
+2. Spark dockerfile sourced mostly from here:
+https://github.com/eBay/Kubernetes/blob/master/examples/spark/images/base/Dockerfile
+3. Spark-ui-proxy dockerfile sourced mostly from here:
+https://github.com/aseigneurin/spark-ui-proxy

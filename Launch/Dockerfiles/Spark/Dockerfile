@@ -19,8 +19,6 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-# Get Hadoop from US Apache mirror and extract just the native libs.
-# Until we care about running HDFS with these containers, this is all we need.
 RUN mkdir -p /opt && \
     cd /opt && \
     curl http://www.us.apache.org/dist/hadoop/common/hadoop-${hadoop_ver}/hadoop-${hadoop_ver}.tar.gz | \
@@ -28,7 +26,6 @@ RUN mkdir -p /opt && \
     ln -s hadoop-${hadoop_ver} hadoop && \
     echo Hadoop ${hadoop_ver} native libraries installed in /opt/hadoop/lib/native
 
-# Get Spark from US Apache mirror
 RUN mkdir -p /opt && \
     cd /opt && \
     curl http://www.us.apache.org/dist/spark/spark-${spark_ver}/spark-${spark_ver}-bin-hadoop${hadoop_ver_short}.tgz | \
@@ -36,7 +33,6 @@ RUN mkdir -p /opt && \
     ln -s spark-${spark_ver}-bin-hadoop${hadoop_ver_short} spark && \
     echo Spark ${spark_ver} installed in /opt
 
-# Get GCS connector
 RUN cd /opt/spark/jars && \
     curl -O https://storage.googleapis.com/hadoop-lib/gcs/gcs-connector-latest-hadoop2.jar
 

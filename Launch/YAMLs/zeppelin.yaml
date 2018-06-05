@@ -13,8 +13,8 @@ spec:
     spec:
       containers:
         - name: zeppelin
-          # image: zeppelin-img:latest
-          image: gcr.io/summer-surfer-203320/zeppelin-img:latest
+          image: zeppelin-img:latest
+          # image: gcr.io/summer-surfer-203320/zeppelin-img:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080

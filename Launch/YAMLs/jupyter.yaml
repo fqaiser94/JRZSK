@@ -13,8 +13,8 @@ spec:
     spec:
       containers:
         - name: jupyter
-          # image: jupyter-img:latest
-          image: gcr.io/summer-surfer-203320/jupyter-img:latest
+          image: jupyter-img:latest
+          # image: gcr.io/summer-surfer-203320/jupyter-img:latest
           imagePullPolicy: IfNotPresent
           # resources:
             # requests:

@@ -13,8 +13,8 @@ spec:
     spec:
       containers:
         - name: spark-worker
-          # image: spark-img:latest
-          image: gcr.io/summer-surfer-203320/spark-img:latest
+          image: spark-img:latest
+          # image: gcr.io/summer-surfer-203320/spark-img:latest
           imagePullPolicy: IfNotPresent
           command:
           - "/bin/bash"

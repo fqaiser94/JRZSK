@@ -13,8 +13,8 @@ spec:
     spec:
       containers:
         - name: rstudio
-          # image: rstudio-img:latest
-          image: gcr.io/summer-surfer-203320/rstudio-img:latest
+          image: rstudio-img:latest
+          # image: gcr.io/summer-surfer-203320/rstudio-img:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8787
