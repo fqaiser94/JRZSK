@@ -46,7 +46,7 @@ kportforward spark-ui http component=spark-ui 8080
 kportforward livy http component=livy 8998
 kportforward jupyter http component=jupyter 8888
 kportforward zeppelin http component=zeppelin 8081
-# kportforward rstudio http component=rstudio 8787
+kportforward rstudio http component=rstudio 8787
 
 # kubectl exec spark-master-podId -it spark-shell
 # kubectl exec spark-master-podId -it pyspark
